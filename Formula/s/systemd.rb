@@ -3,13 +3,13 @@ class Systemd < Formula
 
   desc "System and service manager"
   homepage "https://wiki.freedesktop.org/www/Software/systemd/"
-  url "https://github.com/systemd/systemd-stable/archive/refs/tags/v255.7.tar.gz"
-  sha256 "da29f2490c192ca743511098b1d15e385b1b5e7744979661dc30514c1ac61f0e"
+  url "https://github.com/systemd/systemd-stable/archive/refs/tags/v256.tar.gz"
+  sha256 "81ed336d36e48b1f31b876540f437755f33c7c389ba6e8efb8d3512129f0096d"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
   head "https://github.com/systemd/systemd.git", branch: "main"
 
   bottle do
-    sha256 x86_64_linux: "ed07a1bb6e5cb4b7b4f9e0337c780d2769a7eed8c5d1b2af61f24e7d26b89571"
+    sha256 x86_64_linux: "ca40487e044c9d6b7ad214d453b1cab696e5ccbd5244eca78460972cb0589a17"
   end
 
   depends_on "coreutils" => :build
@@ -37,6 +37,8 @@ class Systemd < Formula
   depends_on "util-linux" # for libmount
   depends_on "xz"
   depends_on "zstd"
+
+  link_overwrite "etc/ssh/ssh_config.d/20-systemd-ssh-proxy.conf"
 
   resource "jinja2" do
     url "https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz"
