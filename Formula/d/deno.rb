@@ -1,8 +1,8 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.com/"
-  url "https://github.com/denoland/deno/releases/download/v1.45.2/deno_src.tar.gz"
-  sha256 "d8d74295d2f0a1362a2d03a452f522d8e251fb63d186365aa4be0516fc010c01"
+  url "https://github.com/denoland/deno/releases/download/v1.45.4/deno_src.tar.gz"
+  sha256 "371332927efd9e37b1aed42546baab5e67e173c55c00ad82ad2a79a643be420b"
   license "MIT"
   head "https://github.com/denoland/deno.git", branch: "main"
 
@@ -44,8 +44,8 @@ class Deno < Formula
   # TODO: Remove this and `v8` resource when https://github.com/denoland/rusty_v8/issues/1065 is resolved
   # VERSION=#{version} && curl -s https://raw.githubusercontent.com/denoland/deno/v$VERSION/Cargo.lock | grep -C 1 'name = "v8"'
   resource "rusty_v8" do
-    url "https://static.crates.io/crates/v8/v8-0.97.0.crate"
-    sha256 "5ecc402c55b363c29901bdd0613c68213b01c5b2a3ee362d5e985cb74901b472"
+    url "https://static.crates.io/crates/v8/v8-0.99.0.crate"
+    sha256 "fa3fc0608a78f0c7d4ec88025759cb78c90a29984b48540060355a626ae329c1"
   end
 
   # Find the v8 version from the last commit message at:
@@ -58,8 +58,8 @@ class Deno < Formula
 
   # VERSION=#{version} && curl -s https://raw.githubusercontent.com/denoland/deno/v$VERSION/Cargo.lock | grep -C 1 'name = "deno_core"'
   resource "deno_core" do
-    url "https://github.com/denoland/deno_core/archive/refs/tags/0.293.0.tar.gz"
-    sha256 "975a84cd886f0674aa2a88fb9250957a132eda9f76b7f024b62831c425ae166b"
+    url "https://github.com/denoland/deno_core/archive/refs/tags/0.299.0.tar.gz"
+    sha256 "95afc1ba85d1550290801207521ad0c6e293ca103ee6ee29cfa08b3eba82c2e8"
   end
 
   # To find the version of gn used:
