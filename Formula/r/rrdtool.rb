@@ -4,8 +4,8 @@ class Rrdtool < Formula
   license "GPL-2.0-only"
 
   stable do
-    url "https://github.com/oetiker/rrdtool-1.x/releases/download/v1.8.0/rrdtool-1.8.0.tar.gz"
-    sha256 "bd37614137d7a8dc523359648eb2a81631a34fd91a82ed5581916a52c08433f4"
+    url "https://github.com/oetiker/rrdtool-1.x/releases/download/v1.9.0/rrdtool-1.9.0.tar.gz"
+    sha256 "5e65385e51f4a7c4b42aa09566396c20e7e1a0a30c272d569ed029a81656e56b"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
